@@ -1,0 +1,133 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background: url('../images/shattered.png');
+	height: 100%;
+}
+html{
+	height: 100%;
+}
+ul,li{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+input{
+	padding: 0px;
+	margin: 0px;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* line 18, ../../../../.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.6/app/assets/stylesheets/addons/_clearfix.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+/* line 23, ../../../../.rvm/gems/ruby-1.9.3-p392/gems/bourbon-3.1.6/app/assets/stylesheets/addons/_clearfix.scss */
+.clearfix:after {
+  clear: both;
+}
+
+
+.header{
+	position: fixed;
+	z-index: 99;
+	border-bottom: 1px solid #546784;
+	width: 100%;
+	background-color: #3e5170;
+	text-align: center;
+}
+.header_left{
+	margin-left: 15px;
+}
+.logo{
+	float: left;
+}
+.version_number{
+	float: left; color: #fff;font-size: 12px;line-height: 24px;
+}
+.header_right{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.shop_name{
+	float: left;
+	height: 38px;
+	margin-top: 10px;
+	background-color: #2c3b54;
+	line-height: 38px;
+	color: #fff;
+	padding-left: 10px;
+	margin-right: 10px;
+	padding-right: 10px;
+}
+.exit_system{
+	float: left;padding: 0 10px;height: 38px;margin-top: 10px; background-color: #2c3b54;line-height: 38px;color: #fff;margin-right: 10px;
+}
+.shops_pic{
+	margin-left: 10px;
+}
+.exit_pic{
+	margin-right: 10px;
+}
+.section{
+	width: 100%;
+}
+
+.title{
+	height: 65px;
+	border-top: 1px solid #586b87;border-bottom: 1px solid #445773;
+}
+.nav_pic_visited{
+	margin-left: 15px;margin-top: 18px;margin-right: 13px;
+	display: block;float: left;
+}
+.nav_info_visited{
+	color: #fff;line-height: 65px;
+}
+.nav_pic1{
+	margin-left: 15px;margin-top: 14px;margin-right: 13px;
+	display: block;float: left;
+}
+.nav_pic2{
+	margin-left: 15px;margin-top: 16px;margin-right: 13px;
+	display: block;float: left;
+}
+.nav_info1{
+	color: #99ccff;line-height: 65px;
+}
+.item_height1{
+	height: 50px;border-top: 1px solid #586b87;
+}
+.item_height2{
+	height: 50px;border-bottom: 1px solid #445773;
+}
+.nav_pic{
+	margin-left: 15px; margin-top: 11px;display: block;float: left;
+}
+.nav_info{
+	float: left;line-height: 50px;
+}
+.left_nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 156px;
+	background-color: #4a5e7d;
+	border-right: 4px solid #fb9337;
+	height: 100%;
+}
+.left_nav ul{
+	margin-top: 59px;
+}
+
+a.bule_nav:link{
+	color: #fff;
+}
+.section{
+	position: absolute;
+	top: 0;
+	height: 100%;
+}

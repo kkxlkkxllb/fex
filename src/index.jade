@@ -1,0 +1,60 @@
+!!! 5
+html(lang="en")
+	head
+		include includes/header
+	body
+		// 顶部
+		header.header
+			.header_left.clearfix
+				.logo
+					img(src='./assets/images/logo_02.png', alt='')
+				.version_number 内测版
+			.header_right
+				.shop_name
+					span.shops_name 上海工商银行张东路门店小贷处
+					span.shops_pic
+						img(src='./assets/images/newstyle_42.png', alt='')
+				.exit_system
+					span.exit_pic
+						img(src='./assets/images/newstyle_03.png', alt='')
+					span.exit_system_name 登出
+		// 中间部分
+		.section
+			// 左侧导航条
+			.left_nav
+				ul
+					li.item.title
+						a(href="#")
+							span.nav_pic_visited.nav_icon_1
+
+							span.nav_info_visited 管理中心
+					li
+						.title
+							span.nav_pic1
+								img(src='./assets/images/newstyle_18.png', alt='')
+							span.nav_info1 企业客户
+						a.bule_nav(href='#report_e')
+							.item.item_height1.clearfix
+								span.nav_pic.nav_icon_2
+								span.nav_info 数据报告查询
+						a.bule_nav(href='#monitor_e')
+							.item.item_height2
+								span.nav_pic.nav_icon_3
+								span.nav_info 贷后数据监控
+					li
+						.title
+							span.nav_pic1
+								img(src='./assets/images/newstyle_18.png', alt='')
+							span.nav_info1 个人客户
+						a.bule_nav(href='#report_p')
+							.item.item_height1.clearfix
+								span.nav_pic.nav_icon_2
+								span.nav_info 数据报告查询
+						a.bule_nav(href='#monitor_p')
+							.item.item_height2
+								span.nav_pic.nav_icon_3
+								span.nav_info 贷后数据监控
+			// 右侧主体
+			.right_main.main
+
+		footer

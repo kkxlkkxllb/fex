@@ -1,0 +1,131 @@
+//- .top_nav
+//- 	span.glyphicon.glyphicon-home
+//- 	span 管理中心
+//- 	span -
+//- 	span 欢迎页
+//- .header_bar
+//- 	.item
+//- 	.item
+//- 	.item
+//- 	.item
+//- .table_view
+//- 	.table_header
+//- 		span.ico
+//- 		.title 上月风险预警
+//- 	table.table
+//- 		tr
+//- 			th 客户类型
+//- 			th 企业名称/个人姓名
+//- 			th 风险预警
+//- 			th 监控报告
+//- 		tr
+//- 			td 企业
+//- 			td xxx
+//- 			td xx
+//- 			td
+//- 				span.btn.btn-default 查看
+// 上部欢迎
+.right_top
+	.admin_welcome
+		.admin_left_image
+			img(src='assets/images/newstyle4_03.png', alt='')
+		.welcome_pic
+			img(src='assets/images/newstyle_07.png', alt='')
+		span.welcome_word 管理中心 - 欢迎页
+		.admin_right_image
+			img(src='assets/images/newstyle4_07.png', alt='')
+// 右侧导航
+.right_nav
+	ul.clearfix
+		li.right_nav_bg
+			a(href="#report_e/new")
+				.right_nav_pic
+					img(src='assets/images/newstyle_20.png', alt='')
+				.right_nav_word
+					font(color='#fb9337', size='+1')  企业
+					| 新建企业数据查询
+		li.right_nav_bg
+			a(href="#monitor_e/new")
+				.right_nav_pic
+					img(src='assets/images/newstyle_22.png', alt='')
+				.right_nav_word
+					font(color='#fb9337', size='+1')  企业
+					| 新建企业数据监控
+		li.right_nav_bg
+			a(href="#report_e/new")
+				.right_nav_pic
+					img(src='assets/images/newstyle_24.png', alt='')
+				.right_nav_word
+					font(color='#fb9337', size='+1')  个人
+					| 新建企业数据查询
+		li.right_nav_bg
+			a(href="#monitor_e/new")
+				.right_nav_pic
+					img(src='assets/images/newstyle_26.png', alt='')
+				.right_nav_word
+					font(color='#fb9337', size='+1') 个人
+					| 新建企业数据监控
+// 右侧主体内容
+.right_main_list
+	.list_title
+		.list_title_pic_o.left
+			img(src='assets/images/newstyle4_17.png', alt='')
+		.list_title_main
+			.list_title_pic
+				img(src='assets/images/newstyle_36.png', alt='')
+			.list_title_word 上月风险预警
+		.list_title_pic_o.right
+			img(src='assets/images/newstyle4_20.png', alt='')
+.list_main
+	table.table.table-striped
+		tr
+			th
+				span.types 客户类型
+				span.types_pic
+					img(src='assets/images/newstyle_42.png', alt='')
+			th 企业名称/个人姓名
+			th
+				span.types &#39118;&#38505;&#39044;&#35686;
+				span.types_pic
+					img(src='assets/images/newstyle_42.png', alt='')
+			th &#30417;&#25511;&#25253;&#21578;&#16;
+		tr
+			td &#16; &#20225;&#19994;
+			td &#19978;&#28023;&#22799;&#26421;&#39184;&#39278;&#26377;&#38480;&#20844;&#21496;
+			td
+				.money_deal &#20225;&#19994;&#26376;&#20132;&#26131;&#37329;&#39069;&#65288;&#20803;&#65289;&#29615;&#27604;&#19979;&#38477;&#36229;&#36807;50&percnt;
+				.money_deal &#20225;&#19994;&#20027;&#30097;&#20284;&#20449;&#29992;&#21345;&#22871;&#29616;&#20132;&#26131;&#31508;&#25968;&#19981;&#31561;&#20110;0
+			td
+				a.bg_button(href="#monitor/1/detail") &#26597;&#30475;
+		tr
+			td &#16; &#20225;&#19994;
+			td &#19978;&#28023;&#22799;&#26421;&#39184;&#39278;&#26377;&#38480;&#20844;&#21496;
+			td
+				.money_deal
+					font(color='#fff0000') &#20225;&#19994;&#26376;&#20132;&#26131;&#37329;&#39069;&#65288;&#20803;&#65289;&#29615;&#27604;&#19979;&#38477;&#36229;&#36807;50&percnt;
+				.money_deal &#20225;&#19994;&#20027;&#30097;&#20284;&#20449;&#29992;&#21345;&#22871;&#29616;&#20132;&#26131;&#31508;&#25968;&#19981;&#31561;&#20110;0
+			td
+				a.bg_button(href="#monitor/1/detail") &#26597;&#30475;
+		tr
+			td &#16; &#20010;&#20154;
+			td &#27743;&#28487;&#20426;
+			td
+				.money_deal &#20225;&#19994;&#26376;&#20132;&#26131;&#37329;&#39069;&#65288;&#20803;&#65289;&#29615;&#27604;&#19979;&#38477;&#36229;&#36807;50&percnt;
+				.money_deal &#20225;&#19994;&#20027;&#30097;&#20284;&#20449;&#29992;&#21345;&#22871;&#29616;&#20132;&#26131;&#31508;&#25968;&#19981;&#31561;&#20110;0
+			td
+				a.bg_button(href="#monitor/1/detail") &#26597;&#30475;
+	.last_page
+		.page_pic.left
+			img(src='assets/images/newstyle4_24.png', alt='')
+		ul.bg_white
+			li.top_name4 &#16; &#19968;&#20849;&#26377; 3 &#26465;&#39044;&#35686;&#35760;&#24405;
+			li.page
+				span.on_one &#16;&#31532;&#19968;&#39029;
+				span.on_one &#16;&#19978;&#19968;&#39029;
+				span.pc_down 1
+				span.pc 2
+				span.pc 2
+				span.on_one &#16;&#19979;&#19968;&#39029;
+		.page_pic.right
+			img(src='assets/images/newstyle4_27.png', alt='')
+
