@@ -1,0 +1,63 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/Cellar/node/0.10.1/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'spine-app' ]
+2 info using npm@1.2.15
+3 info using node@v0.10.1
+4 verbose read json /Users/yuan/Documents/wx/min-finance/frontend/package.json
+5 verbose read json /Users/yuan/Documents/wx/min-finance/frontend/node_modules/es5-shimify/package.json
+6 verbose read json /Users/yuan/Documents/wx/min-finance/frontend/node_modules/jqueryify/package.json
+7 verbose read json /Users/yuan/Documents/wx/min-finance/frontend/node_modules/json2ify/package.json
+8 verbose read json /Users/yuan/Documents/wx/min-finance/frontend/node_modules/spine/package.json
+9 verbose from cache /Users/yuan/Documents/wx/min-finance/frontend/package.json
+10 verbose readDependencies using package.json deps
+11 verbose cache add [ 'spine-app', null ]
+12 verbose cache add name=undefined spec="spine-app" args=["spine-app",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'spine-app',
+13 verbose parsed url   path: 'spine-app',
+13 verbose parsed url   href: 'spine-app' }
+14 silly lockFile e0cab1c3-spine-app spine-app
+15 verbose lock spine-app /Users/yuan/.npm/e0cab1c3-spine-app.lock
+16 silly lockFile e0cab1c3-spine-app spine-app
+17 silly lockFile e0cab1c3-spine-app spine-app
+18 verbose addNamed [ 'spine-app', '' ]
+19 verbose addNamed [ null, '' ]
+20 silly lockFile 03865bcd-spine-app spine-app@
+21 verbose lock spine-app@ /Users/yuan/.npm/03865bcd-spine-app.lock
+22 silly addNameRange { name: 'spine-app', range: '', hasData: false }
+23 verbose url raw spine-app
+24 verbose url resolving [ 'https://registry.npmjs.org/', './spine-app' ]
+25 verbose url resolved https://registry.npmjs.org/spine-app
+26 info trying registry request attempt 1 at 15:44:20
+27 http GET https://registry.npmjs.org/spine-app
+28 http 404 https://registry.npmjs.org/spine-app
+29 silly registry.get cb [ 404,
+29 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+29 silly registry.get     date: 'Mon, 09 Dec 2013 07:44:21 GMT',
+29 silly registry.get     'content-type': 'application/json',
+29 silly registry.get     'content-length': '52',
+29 silly registry.get     'cache-control': 'must-revalidate' } ]
+30 silly lockFile 03865bcd-spine-app spine-app@
+31 silly lockFile 03865bcd-spine-app spine-app@
+32 error 404 'spine-app' is not in the npm registry.
+32 error 404 You should bug the author to publish it
+32 error 404
+32 error 404 Note that you can also install from a
+32 error 404 tarball, folder, or http url, or git url.
+33 error System Darwin 13.0.0
+34 error command "/usr/local/Cellar/node/0.10.1/bin/node" "/usr/local/bin/npm" "install" "spine-app"
+35 error cwd /Users/yuan/Documents/wx/min-finance/frontend
+36 error node -v v0.10.1
+37 error npm -v 1.2.15
+38 error code E404
+39 verbose exit [ 1, true ]

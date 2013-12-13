@@ -1,9 +1,15 @@
 @import './mixin'
+@import './sample'
 
+.text_center
+	text-align center
 ul
 	list-style none
 	margin 0
 	padding 0
+.monitor_permonth,.report_detail
+	.right_main_list
+		cursor pointer
 a.bule_nav
 	color white
 .list_title_pic_o
@@ -13,6 +19,11 @@ a.bule_nav
 			text-decoration none
 span.hint
 	margin-right 10px
+.list_main_p
+	.table-striped > tbody > tr:nth-child(odd) > th
+		background-color #ccc
+	.table
+		background-color #fff
 .list_main
 	border-radius 0 0 10px 10px
 	padding-bottom 10px
@@ -97,5 +108,17 @@ li.right_nav_bg
 .date_select
 	height 33px
 	border-style none
+	padding 0 5px
+	border: 1px solid #cccccc
 i
 	font-style normal
+table.table.no-m
+	margin 0
+
+.monitor_list
+	td.no_indent
+		text-indent 0
+	td .txt
+		width 50px
+		text-align center
+		display inline-block

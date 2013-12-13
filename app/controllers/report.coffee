@@ -6,6 +6,6 @@ class Report extends Spine.Controller
 		super
 		$(".main").append @render()
 	render: ->
-		@html require("views/report")()
+		@html require("views/report")(type: @type)
 
 module.exports = Report

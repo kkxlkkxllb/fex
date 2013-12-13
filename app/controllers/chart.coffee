@@ -1,11 +1,12 @@
 class Chart extends Spine.Controller
 	constructor: ->
 		super
-	render: ->
-		@html require("views/sample")()
+		@render()
 		@initChart()
 		@initChart2()
 		@initChart3()
+	render: ->
+		@html require("views/sample")()
 	initChart: ->
 		$('#chart').highcharts
 			credits:
@@ -79,7 +80,8 @@ class Chart extends Spine.Controller
 				offset: 5
 			plotOptions:
 				column:
-					borderRadius: 10
+					# borderRadius: 10
+					arrowTop: true
 					pointPadding: -0.3
 					groupPadding: 0.2
 					borderWidth: 0

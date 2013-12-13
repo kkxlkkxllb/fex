@@ -6,6 +6,6 @@ class Monitor extends Spine.Controller
 		super
 		$(".main").append @render()
 	render: ->
-		@html require("views/monitor")()
+		@html require("views/monitor")(type: @type)
 
 module.exports = Monitor

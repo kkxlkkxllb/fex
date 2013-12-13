@@ -4,7 +4,8 @@
 			img(src='assets/images/newstyle4_03.png', alt='')
 		.welcome_pic
 			img(src='assets/images/newstyle_07.png', alt='')
-		span.welcome_word 管理中心 - 企业客户 - 贷后数据监控
+		- txt = type === "e" ? "企业客户" : "个人客户"
+		span.welcome_word= "管理中心 - " + txt + " - 贷后数据监控"
 		.admin_right_image
 			img(src='assets/images/newstyle4_07.png', alt='')
 // 右侧主体内容
@@ -18,14 +19,17 @@
 			img(src='assets/images/page2_05.png', alt='')
 // 监控信息内容
 .list_main_p
-	form.form_bg1(method='post', action='')
+	if type === "p"
 		table.table.table-striped(width='100%')
 			tr
 				td.grad_height50.grad_bg_white(width='150px', height='50px') &#30417;&#25511;&#32534;&#21495;&#65306;
 				td.grad_bg_gray1 F&UnderBar;BREPORT0003
 			tr
-				td.grad_height50.grad_bg_white(height='50px') &#21830;&#25143;&#21517;&#31216;&#65306;
-				td.grad_bg_gray1 &#19978;&#28023;&#22799;&#26421;&#39184;&#39278;&#26377;&#38480;&#20844;&#21496;
+				td.grad_height50.grad_bg_white(height='50px') &#22995;&#21517;&#65306;
+				td.grad_bg_gray1 xxx
+			tr
+				td.grad_height50.grad_bg_white(height='50px') &#36523;&#20221;&#35777;&#21495;&#65306;
+				td.grad_bg_gray1 020202020202020202
 			tr
 				td.grad_height50.grad_bg_white(height='50px') &#30417;&#25511;&#26376;&#20221;&#21306;&#38388;&#65306;
 				td.grad_bg_gray1 2013-12&#33267;2014-11
@@ -33,12 +37,33 @@
 				td.grad_height50.grad_bg_white(height='50px') &#35746;&#38405;Email&#65306;
 				td.grad_bg_gray1 zhangsan&commat;f&period;com
 			tr
-				td.grad1_height50.grad_bg_white(rowspan='3') &#39118;&#38505;&#39044;&#35686;&#25351;&#26631;&#65306;
-				td.grad_bg_gray1(height='50px') &#20225;&#19994;&#26376;&#20132;&#26131;&#37329;&#39069;&#65288;&#20803;&#65289;&#29615;&#27604;&#19979;&#38477;&#36229;&#36807;50&percnt;
+				td.grad1_height50.grad_bg_white(rowspan='3') 风险预警指标：
+				td.grad_bg_gray1(height='50px') 月消费金额（元）环比上升超过100%
 			tr
-				td.grad_bg_gray1(height='50px') &#20225;&#19994;&#21333;&#26085;&#26368;&#20302;&#20132;&#26131;&#37329;&#39069;&#65288;&#20803;&#65289;&#23567;&#20110;&#25110;&#31561;&#20110;500
+				td.grad_bg_gray1(height='50px') 境外消费占比大于或等于50%
 			tr
-				td(height='50px') &#20225;&#19994;&#20027;&#30097;&#20284;&#20449;&#29992;&#21345;&#22871;&#29616;&#20132;&#26131;&#31508;&#25968;&#19981;&#31561;&#20110;0
+				td(height='50px') 疑似信用卡套现交易笔数不等于0
+	else
+		table.table.table-striped(width='100%')
+			tr
+				td.grad_height50.grad_bg_white(width='150px', height='50px') 监控编号：
+				td.grad_bg_gray1 F&UnderBar;BREPORT0003
+			tr
+				td.grad_height50.grad_bg_white(height='50px') 商户名称：
+				td.grad_bg_gray1 上海夏朵餐饮有限公司
+			tr
+				td.grad_height50.grad_bg_white(height='50px') 监控月份区间：
+				td.grad_bg_gray1 2013-12至2014-11
+			tr
+				td.grad_height50.grad_bg_white(height='50px') 订阅Email：
+				td.grad_bg_gray1 zhangsan@f.com
+			tr
+				td.grad1_height50.grad_bg_white(rowspan='3') 风险预警指标：
+				td.grad_bg_gray1(height='50px') 企业月交易金额（元）环比下降超过50%
+			tr
+				td.grad_bg_gray1(height='50px') 企业单日最低交易金额（元）小于或等于500
+			tr
+				td(height='50px') 企业主疑似信用卡套现交易笔数不等于0
 // 11
 // 右侧主体内容
 .right_main_list
@@ -52,41 +77,41 @@
 // 监控信息内容
 .list_main_p
 	form.form_bg2(method='post', action='')
-		table(width='100%')
+		table.table.table-striped.no-m(width='100%')
 			tr.color_bg_tray
-				td(width='40%', height='40px') &#30417;&#25511;&#26376;&#20221;
-				td(width='40%') &#39118;&#38505;&#39044;&#35686;&#25351;&#26631;
-				td &#30417;&#25511;&#25253;&#21578;
+				th.text_center(width='40%', height='40px') 监控月份
+				th.text_center(width='40%') 风险预警指标
+				th.text_center 监控报告
 			tr.grad_bg_white
 				td(height='70px') 2014-05
 				td
 					font(color='#006633') &#26410;&#35302;&#21450;
 				td
-					button.bg_button1 &#26597;&#30475;
+					a.bg_button(href="#monitor/#{type}/1/month/1") 查看
 			tr
 				td(height='70px') 2014-04
 				td
 					font(color='#006633') &#26410;&#35302;&#21450;
 				td
-					button.bg_button1 &#26597;&#30475;
+					a.bg_button(href="#monitor/#{type}/1/month/1") 查看
 			tr.grad_bg_white
 				td(height='70px') 2014-03
 				td
 					font(color='#FF0000') &#35302;&#21450;
 				td
-					button.bg_button1 &#26597;&#30475;
+					a.bg_button(href="#monitor/#{type}/1/month/1") 查看
 			tr.grad_bg_white
 				td(height='70px') 2014-02
 				td
 					font(color='#006633') &#26410;&#35302;&#21450;
 				td
-					button.bg_button1 &#26597;&#30475;
+					a.bg_button(href="#monitor/#{type}/1/month/1") 查看
 			tr
 				td 2014-01
 				td(height='70px')
-					font(color='#006633') &#26410;&#35302;&#21450;
+					font(color='#006633') 未触及
 				td
-					button.bg_button1 &#26597;&#30475;
+					a.bg_button(href="#monitor/#{type}/1/month/1") 查看
 .last_page
 	.page_pic.left
 		img(src='assets/images/newstyle4_24.png', alt='')

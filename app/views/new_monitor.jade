@@ -4,7 +4,8 @@
 			img(src='assets/images/newstyle4_03.png', alt='')
 		.welcome_pic
 			img(src='assets/images/newstyle_07.png', alt='')
-		span.welcome_word 管理中心 - 企业客户 - 贷后数据监控
+		- txt = type === "e" ? "企业客户" : "个人客户"
+		span.welcome_word= "管理中心 - " + txt + " - 贷后数据监控"
 		.admin_right_image
 			img(src='assets/images/newstyle4_07.png', alt='')
 
@@ -14,32 +15,33 @@
 		.list_title_pic_o.left
 			img(src='assets/images/page2_03.png', alt='')
 		.list_title_main2
-			.list_title_word 新建查询
+			.list_title_word 新建监控
 		.list_title_pic_o.right
 			img(src='assets/images/page2_05.png', alt='')
 // 新建列表表单
 .list_main
-	form.form_bg(method='post', action='')
+	form.form_bg(method='post' data-action='#' data-back="monitor/#{type}")
 		table.monitor_list
 			tr.monitor_title_bg
 				td(colspan='5') 填写监控基本信息
 			tr
-				td.form_no_bg(width='100px') 企业名称：
-				td(width='380px', colspan='3')
-					.input_wk
-						input.no_wk(type='text' name='' value='')
+				if type === "p"
+					td.form_no_bg(width='100px') 身份证号码：
+					td(width='380px', colspan='3')
+						.input_wk
+							input.no_wk(type='text' name='identify_code' value='')
+				else
+					td.form_no_bg(width='100px') 企业名称：
+					td(width='380px', colspan='3')
+						.input_wk
+							input.no_wk(type='text' name='company_name' value='')
 				td 监控数据前先查询数据报告
 			tr.form_gray_bg
 				td 监控月份区间：
-				td(colspan='3')
-					span.monitor_left
-						.input_wk150
-							input#date_begin.date_select(type='text', name='', value='')
-
-					span.monitor_with70 &#33267;
-					span.monitor_left
-						.input_wk150
-							input#date_end.date_select(type='text', name='', value='')
+				td.no_indent(colspan='3')
+					input#date_begin.date_select(type='text', name='begin_date', value='')
+					span.txt 至
+					input#date_end.date_select(type='text', name='end_date', value='')
 
 				td
 			tr.form_no_bg
@@ -49,32 +51,11 @@
 				td &#22810;&#20010;Email&#22320;&#22336;&#29992;&#36887;&#21495;&#20998;&#38548;
 			tr.monitor_title_bg
 				td(colspan='6') 设置风险预警指标
-			tr.form_no_bg
-				td.form_no_bg(colspan='2')
-					.input_wk240.monitor_marg10
-						input.no_wk240(type='', name='', value='')
-						img(src='assets/images/monitor_03.png', alt='')
-				td(width='130px')
-					.input_wk118.monitor_marg10
-						input.no_wk118(type='', name='', value='')
-						img(src='assets/images/monitor_03.png', alt='')
-				td(width='100px')
-					input.have_wk80(type='', name='', value='')
-				td
-					img(src='assets/images/new_03.png', alt='')
-			tr.form_gray_bg
-				td.form_no_bg(colspan='2')
-					.input_wk240.monitor_marg10
-						input.no_wk240(type='', name='', value='')
-						img(src='assets/images/monitor_03.png', alt='')
-				td
-					.input_wk118.monitor_marg10
-						input.no_wk118(type='', name='', value='')
-						img(src='assets/images/monitor_03.png', alt='')
-				td
-					input.have_wk80(type='', name='', value='')
-				td
-					button.bg_button1 &#22686;&#21152;
+
+			tr.action
+				td.text_center
+					button.addOne.bg_button 增加
+
 			tr
 				td.form_no_bg(colspan='4')
 					button.bule_button &#24320;&#22987;&#30417;&#25511;

@@ -4,7 +4,8 @@
 			img(src='assets/images/newstyle4_03.png', alt='')
 		.welcome_pic
 			img(src='assets/images/newstyle_07.png', alt='')
-		span.welcome_word 管理中心 - 企业客户 - 数据报告查询
+		- txt = type === "e" ? "企业客户" : "个人客户"
+		span.welcome_word= "管理中心 - " + txt + " - 数据报告查询"
 		.admin_right_image
 			img(src='assets/images/newstyle4_07.png', alt='')
 
@@ -16,44 +17,47 @@
 		.list_title_main2
 			.list_title_word 查询记录
 		.list_title_pic_o.right2
-			a(href="#report_e/new")
+			a(href="#report/#{type}/new")
 				span.add_button_pic
 					img(src='assets/images/page2_07.png', alt='')
 					span.add_button_word 新建查询
 .list_main
 	table.table.table-striped
-		tr
-			th 查询编号
-			th 查询时间
-			th 企业名称
-			th 数据报告
-		tr
-			td F_BREPORT0001
-			td 2013-12-01 10&colon;10&colon;10
-			td &#19978;&#28023;&#25438;&#27966;&#39184;&#39278;&#31649;&#29702;&#26377;&#38480;&#20844;&#21496;&#28023;&#24213;&#25438;&#21556;&#20013;&#36335;&#24215;
-			td
-				span.button_one
-					a.bg_button(href="#report/1/detail") 查看
-				span.button_two
-					button.bg_button 导出
-		tr
-			td &#16; F&UnderBar;BREPORT0002
-			td 2013-12-01 10&colon;10&colon;10
-			td &#19978;&#28023;&#25438;&#27966;&#39184;&#39278;&#31649;&#29702;&#26377;&#38480;&#20844;&#21496;&#28023;&#24213;&#25438;&#21556;&#20013;&#36335;&#24215;
-			td
-				span.button_one
-					a.bg_button(href="#report/1/detail") 查看
-				span.button_two
-					button.bg_button 导出
-		tr
-			td &#16; F&UnderBar;BREPORT0003
-			td 2013-12-01 10&colon;10&colon;10
-			td &#19978;&#28023;&#25438;&#27966;&#39184;&#39278;&#31649;&#29702;&#26377;&#38480;&#20844;&#21496;&#28023;&#24213;&#25438;&#21556;&#20013;&#36335;&#24215;
-			td
-				span.button_one
-					a.bg_button(href="#report/1/detail") 查看
-				span.button_two
-					button.bg_button 导出
+		if type === "p"
+			tr
+				th 查询编号
+				th 查询时间
+				th 姓名
+				th 身份证号
+				th 数据报告
+			each item in [1,2,3]
+				tr
+					td F_BREPORT0001
+					td 2013-12-01 10&colon;10&colon;10
+					td xxx
+					td 020202020202020202
+					td
+						span.button_one
+							a.bg_button(href="#report/#{type}/1/detail") 查看
+						span.button_two
+							button.bg_button 导出
+		else
+			tr
+				th 查询编号
+				th 查询时间
+				th 企业名称
+				th 数据报告
+			each item in [1,2,3]
+				tr
+					td F_BREPORT0001
+					td 2013-12-01 10&colon;10&colon;10
+					td &#19978;&#28023;&#25438;&#27966;&#39184;&#39278;&#31649;&#29702;&#26377;&#38480;&#20844;&#21496;&#28023;&#24213;&#25438;&#21556;&#20013;&#36335;&#24215;
+					td
+						span.button_one
+							a.bg_button(href="#report/#{type}/1/detail") 查看
+						span.button_two
+							button.bg_button 导出
+
 	.last_page
 		.page_pic.left
 			img(src='assets/images/newstyle4_24.png', alt='')

@@ -416,7 +416,7 @@
 				}
 			} else {
 				offset = this.element.offset();
-				left = offset.left - 60;
+				left = offset.left - 30;
 			}
 			if (this.pickerPosition == 'top-left' || this.pickerPosition == 'top-right') {
 				top = offset.top - this.picker.outerHeight();

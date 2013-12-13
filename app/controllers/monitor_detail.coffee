@@ -4,6 +4,6 @@ class MonitorDetail extends Spine.Controller
 		super
 		$(".main").append @render()
 	render: ->
-		@html require("views/monitor_detail")()
+		@html require("views/monitor_detail")(type: @type)
 
 module.exports = MonitorDetail
